@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ancestor Search Portal</title>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<header>
+			<div class="header_nav"></div>
+			<div class="language_modal">
+                <button class="language_option" onclick="setLanguage('en')">English</button>
+				<button class="language_option" onclick="setLanguage('ru')">Русский</button>
+                <button class="language_option" onclick="setLanguage('ua')">Українська</button>
+                <button class="language_option" onclick="setLanguage('be')">Беларуская</button>
+                <button class="language_option" onclick="setLanguage('kk')">Қазақша</button>
+                <button class="language_option" onclick="setLanguage('pl')">Polski</button>
+                <button class="language_option" onclick="setLanguage('bg')">Български</button>
+                <button class="language_option" onclick="setLanguage('ro')">Română</button>
+			</div>
+			<div class="header_text">
+				<h1 key="title">Ancestor Search Portal</h1>
+				<p key="description">Search for historical records across multiple databases</p>
+			</div>
+		</header>
+
+		<div class="container">
+			<form id="search-form">
+				<label for="last-name" key="lastname">Last Name:</label>
+				<input
+                    key="lastnameinput"
+					type="text"
+					id="last-name"
+					name="last-name"
+					placeholder="E.g., Petrov"
+				/>
+
+				<label for="first-name" key="firstname">First Name:</label>
+				<input
+                    key="firstnameinput"
+					type="text"
+					id="first-name"
+					name="first-name"
+					placeholder="E.g., Ivan"
+				/>
+
+				<label for="middle-name" key="middlename">Middle Name (optional):</label>
+				<input
+                    key="middlenameinput"
+					type="text"
+					id="middle-name"
+					name="middle-name"
+					placeholder="E.g., Ivanov"
+				/>
+
+				<label for="birth-year" key="birthyear">Birth Year (optional):</label>
+				<input
+                    key="birthyearinput"
+					type="text"
+					id="birth-year"
+					name="birth-year"
+					placeholder="E.g., 1900"
+				/>
+
+
+
+				<button type="submit" key="search">Search</button>
+			</form>
+
+			<div class="results" id="results">
+				<!-- Search results will appear here -->
+			</div>
+		</div>
+		<script src="languages.js"></script>
+		<script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	</body>
+</html>
